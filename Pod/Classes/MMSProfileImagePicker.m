@@ -33,7 +33,7 @@
 @import ImageIO;
 
 const CGFloat kOverlayInset = 10;
-
+const CGFloat kVisibleOverlayInset = 40;
 @implementation MMSProfileImagePicker
 
 {
@@ -293,7 +293,7 @@ const CGFloat kOverlayInset = 10;
      */
     
     // Compute crop rectangle.
-    cropRect = [self centerSquareRectInRect:screenRect.size withInsets:UIEdgeInsetsMake(kOverlayInset, kOverlayInset, kOverlayInset, kOverlayInset)];
+    cropRect = [self centerSquareRectInRect:screenRect.size withInsets:UIEdgeInsetsMake(kVisibleOverlayInset, kVisibleOverlayInset, kVisibleOverlayInset, kVisibleOverlayInset)];
     
     overlayView = [[UIScrollView alloc] initWithFrame:screenRect];
     
@@ -1035,12 +1035,24 @@ const CGFloat kOverlayInset = 10;
     
     for (device in devices) {
         
+        
         if ([device hasMediaType:AVMediaTypeVideo]) {
             
-            if ([device position] == AVCaptureDevicePositionBack) {
-                break;
+            if (imagePicker.cameraDevice==UIImagePickerControllerCameraDeviceFront) {
+                
+                if ([device position] == AVCaptureDevicePositionFront) {
+                    break;
+                }
+                
                 
             }
+            
+            else{
+                
+                if ([device position] == AVCaptureDevicePositionBack) {
+                    break;
+                }
+
         }
     }
     
