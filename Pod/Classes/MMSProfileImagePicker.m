@@ -1046,12 +1046,13 @@ const CGFloat kVisibleOverlayInset = 40;
                 
                 
             }
-            
-            else{
-                
-                if ([device position] == AVCaptureDevicePositionBack) {
+        }
+        
+        
+        else{
+            if ([device position] == AVCaptureDevicePositionBack) {
                     break;
-                }
+            }
 
         }
     }
