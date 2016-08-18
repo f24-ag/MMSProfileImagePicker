@@ -1044,16 +1044,35 @@ const CGFloat kVisibleOverlayInset = 40;
                     break;
                 }
                 
+            }
+            
+            if (imagePicker.cameraDevice==UIImagePickerControllerCameraDeviceRear) {
+                
+                if ([device position] == AVCaptureDevicePositionBack) {
+                    break;
+                }
                 
             }
+            
         }
         
         
         else{
-            if ([device position] == AVCaptureDevicePositionBack) {
+            if (imagePicker.cameraDevice==UIImagePickerControllerCameraDeviceFront) {
+                
+                if ([device position] == AVCaptureDevicePositionFront) {
                     break;
+                }
+                
             }
-
+            
+            if (imagePicker.cameraDevice==UIImagePickerControllerCameraDeviceRear) {
+                
+                if ([device position] == AVCaptureDevicePositionBack) {
+                    break;
+                }
+                
+            }
         }
     }
     
