@@ -669,7 +669,7 @@ const CGFloat kVisibleOverlayInset = 40;
 -(void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     
-    if (imagePicker.sourceType == UIImagePickerControllerSourceTypeCamera && !isSnapPhotoTargetAdded && isPresentingCamera) {
+   /* if (imagePicker.sourceType == UIImagePickerControllerSourceTypeCamera && !isSnapPhotoTargetAdded && isPresentingCamera) {
         
         UIView* bottomBarView = [viewController.view.subviews objectAtIndex:2];
         
@@ -681,7 +681,7 @@ const CGFloat kVisibleOverlayInset = 40;
         
         isSnapPhotoTargetAdded = YES;
 
-    }
+    }*/
     
 }
 
