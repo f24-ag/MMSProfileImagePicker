@@ -138,7 +138,7 @@ const CGFloat kVisibleOverlayInset = 40;
     
     self = [super init];
     
-    _minimumZoomScale = 2;
+    _minimumZoomScale = 1;
     _maximumZoomScale = 10;
     _backgroundColor = [UIColor blackColor];
     _foregroundColor = [UIColor whiteColor];
