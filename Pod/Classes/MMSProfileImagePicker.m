@@ -779,7 +779,11 @@ const CGFloat kVisibleOverlayInset = 40;
         
     } else if (isPresentingCamera) {
         
-        [imagePicker popViewControllerAnimated:NO];
+        [imagePicker dismissViewControllerAnimated:NO completion:^{
+            [proxyVC presentViewController:imagePicker animated:YES completion:nil];
+            
+            
+        }];
         
     } else {
         
