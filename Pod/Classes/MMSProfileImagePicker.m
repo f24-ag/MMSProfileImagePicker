@@ -429,11 +429,12 @@ const CGFloat kVisibleOverlayInset = 40;
      */
     if (isPresentingCamera) {
         
-        [button setTitle:@"Retake" forState:UIControlStateNormal];
+        [button setTitle:NSLocalizedString(@"back", nil) forState:UIControlStateNormal];
         
     } else {
         
-        [button setTitle:@"Cancel" forState:UIControlStateNormal];
+        
+        [button setTitle:NSLocalizedString(@"cancel", nil) forState:UIControlStateNormal];
         
     }
     
