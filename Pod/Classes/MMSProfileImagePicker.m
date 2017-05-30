@@ -379,7 +379,7 @@ const CGFloat kVisibleOverlayInset = 40;
     
     if (isPresentingCamera) {
         
-        [button setTitle:NSLocalizedString(@"Use Photo", nil) forState:UIControlStateNormal];
+        [button setTitle:NSLocalizedString(@"Use photo", nil) forState:UIControlStateNormal];
         
     } else {
         
