@@ -337,7 +337,7 @@ const CGFloat kVisibleOverlayInset = 40;
     
     label = [[UILabel alloc] initWithFrame:kTitleFrame];
     
-    label.text = @"Move and Scale";
+    label.text = NSLocalizedString(@"Move and Scale", nil);
     
     label.textColor = _foregroundColor;
     
@@ -379,11 +379,11 @@ const CGFloat kVisibleOverlayInset = 40;
     
     if (isPresentingCamera) {
         
-        [button setTitle:@"Use Photo" forState:UIControlStateNormal];
+        [button setTitle:NSLocalizedString(@"Use Photo", nil) forState:UIControlStateNormal];
         
     } else {
         
-        [button setTitle:@"Choose" forState:UIControlStateNormal];
+        [button setTitle:NSLocalizedString(@"Choose", nil) forState:UIControlStateNormal];
     }
 
     [button setTitleColor:_foregroundColor forState:UIControlStateNormal];
@@ -429,7 +429,7 @@ const CGFloat kVisibleOverlayInset = 40;
      */
     if (isPresentingCamera) {
         
-        [button setTitle:NSLocalizedString(@"back", nil) forState:UIControlStateNormal];
+        [button setTitle:NSLocalizedString(@"Retake", nil) forState:UIControlStateNormal];
         
     } else {
         
