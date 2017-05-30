@@ -337,7 +337,7 @@ const CGFloat kVisibleOverlayInset = 40;
     
     label = [[UILabel alloc] initWithFrame:kTitleFrame];
     
-    label.text = NSLocalizedString(@"Move and Scale", nil);
+    label.text = NSLocalizedString(@"Move and scale", nil);
     
     label.textColor = _foregroundColor;
     
